@@ -21,7 +21,7 @@ import time
 import logging
 import spidev as SPI
 sys.path.append("..")
-from lib2 import LCD_1inch47
+from lib import LCD_1inch47
 from PIL import Image, ImageDraw, ImageFont
 import RPi.GPIO as GPIO
 
@@ -223,7 +223,7 @@ def sendemail():
 	msg.set_content("I really hope this goes through")
 	
 	# Calling pdf (PDF file must be in same directory as script)
-	files = ["Main_Code.py"]
+	files = ["Voltage_vs_Time_Graph.pdf"]
 	
 	for file in files:
 		with open(file, 'rb') as f:
@@ -241,16 +241,16 @@ def sendemail():
 		
 	print("Sent")
 	
-## Runner
+## Runner  
 #led()
-#Welcome_Screen()
-#Confirm_Screen()
-#Test_Screen()
-#getdata()
-#Stop_Screen()
-#plotdata()
+Welcome_Screen()
+Confirm_Screen()
+Test_Screen()
+getdata()
+Stop_Screen()
+plotdata()
 sendemail()
-#End_Screen()
+End_Screen()
 		
 from subprocess import call
 #call("sudo shutdown --poweroff", shell=True)
