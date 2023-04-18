@@ -37,7 +37,7 @@ def led():
 # Raspberry pi pin configuration
 RST = 27
 DC = 25
-BL = 18
+BL = 17
 bus = 0
 device = 0
 logging.basicConfig(level=logging.DEBUG)
